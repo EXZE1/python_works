@@ -17,6 +17,5 @@ for point in student_list.values():
 ortalama = int(sum/len(student_list))
 print("Sınıf Oratalaması: ", ortalama)
 
-
-
+print("Oguzhan")
 
