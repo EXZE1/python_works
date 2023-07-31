@@ -1,0 +1,87 @@
+#include <stdio.h>
+int main()
+{
+	int secim,d_cekirdek=0,d_findik=0,d_fistik=0;
+	int secim,b_cekirdek=30,b_findik=100,b_fistik=50,kasa=100000,kg,tutar;
+	
+	do{
+		printf("\n 1 - urun satis");
+		printf("\n 2 - urun alis");
+		printf("\n 3 - kasa durumu");
+		printf("\n 4 - stok durumu");
+		printf("\n 0 - cikis");
+		printf("\n seciminiz...:");
+		scanf("%d",&secim);
+		switch(secim)
+		{
+			case 1:
+				{
+					printf("\n 1 - cekirde");
+					printf("\n 2 - findik");
+					printf("\n 3 - fistik");
+					scanf("%d",&secim);
+					printf("\n miktar giriniz...: ");
+					scanf("%d",&kg);
+					if(secim==1)
+					{
+						tutar=kg*b_cekirdek*1.2
+						printf("\n odemesi gereken tutar...: %d",tutar);
+						d_cekirdek-=kg;
+						kasa+=tutar;
+					}else if(secim==2)
+					{
+						tutar=kg*b_findik*1.2
+						printf("\n odemesi gereken tutar...: %d",tutar);
+						d_findik-=kg;
+						kasa+=tutar;
+					}else if(secim==3)
+					{
+						tutar=kg*b_fistik*1.2
+						printf("\n odemesi gereken tutar...: %d",tutar);
+						d_fistik-=kg;
+						kasa+=tutar;
+					}else
+					{
+						printf("Yanlis Secim Yaptiniz....:");
+					}
+		
+				}break;
+				case 2:
+					{
+						printf("\n 1 - cekirde");
+					    printf("\n 2 - findik");
+					    printf("\n 3 - fistik");
+					    scanf("%d",&secim);
+					    printf("\n miktar giriniz...: ");
+					    scanf("%d",&kg);
+					    if(secim==1)
+					    {
+						    tutar=kg*b_cekirdek;
+					        printf("\nOdenmesi Gereken Tutar...: %d",tutar);
+					        d_cekirdek+=kg;
+					        kasa-=tutar;
+						}else
+						{
+							printf("\n Yanlis Secim Yaptiniz...:");
+						}
+					}break;
+				case 3:
+				{
+					printf("\n Kasadaki Para Miktari...: %d ",kasa)									
+				}break;
+				case 4: 
+				{
+					printf("\nCekirdek... : %d",d_cekirdek);
+					printf("\nFindik ....: %d",d_findik);
+					printf("\nFistik.... : %d",d_fistik);
+				}break;
+				default:
+					{
+						printf(" Lütfen 0 Ve 4 Arasinda giriniz ......:");
+					}break;
+					
+				
+		}
+
+	}while(secim!=0);
+}
